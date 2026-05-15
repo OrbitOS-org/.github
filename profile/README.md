@@ -1,6 +1,8 @@
 <div align="center">
 
-# Orbit OS
+<img src="logo8.png" alt="Orbit OS" width="220" />
+
+---
 
 **A modern operating system built for edge devices and embedded systems.**
 
