@@ -86,7 +86,7 @@ Full reference: **[SDK & API reference (API 26)](https://www.orbit-os.org/api-re
 | **[orbit-os-sdk-python](https://github.com/OrbitOS-org/orbit-os-sdk-python)** | Python SDK |
 | **[orbit-os-sdk-java](https://github.com/OrbitOS-org/orbit-os-sdk-java)** | Java SDK (Java 17+) |
 | **[orbit-os-app-mcp-server](https://github.com/OrbitOS-org/orbit-os-app-mcp-server)** | MCP server — let AI agents (Cursor, Claude Code…) control GPIO, I²C, UART, Wi-Fi and Bluetooth on a real device |
-| **[app-rpi-4ch-relay-keyestudio](https://github.com/OrbitOS-org/app-rpi-4ch-relay-keyestudio)** | Example app — 4-channel relay controller with web UI, Modbus TCP and MQTT / Home Assistant |
+| **[orbit-os-app-rpi-4ch-relay-keyestudio](https://github.com/OrbitOS-org/orbit-os-app-rpi-4ch-relay-keyestudio)** | Example app — 4-channel relay controller with web UI, Modbus TCP and MQTT / Home Assistant |
 
 ## Capabilities
 
