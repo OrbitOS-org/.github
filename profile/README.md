@@ -1,6 +1,8 @@
 <div align="center">
 
-<img src="logo8.png" alt="Orbit OS" width="220" />
+<p align="center">
+  <img src="https://www.orbit-os.org/images/vscode/orbit-os-logo.png" width="300" alt="Orbit OS">
+</p>
 
 ---
 
