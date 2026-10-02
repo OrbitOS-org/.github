@@ -1,89 +1,111 @@
-<div align="center">
+<p align="center">
+  <img src="https://www.orbit-os.org/images/vscode/orbit-os-logo.png" width="320" alt="Orbit OS">
+</p>
+
+<h3 align="center">Build your application. Orbit OS handles the platform.</h3>
 
 <p align="center">
-  <img src="https://www.orbit-os.org/images/vscode/orbit-os-logo.png" width="300" alt="Orbit OS">
+An embedded Linux platform for building, deploying, updating and managing connected products —<br>
+a native app runtime, signed apps, an app store, atomic OTA updates and one hardware API for Go, Python and Java.
+</p>
+
+<p align="center">
+  <a href="https://www.orbit-os.org/?ref=github-org"><img src="https://img.shields.io/badge/Website-orbit--os.org-564fd1?style=for-the-badge" alt="Website"></a>
+  <a href="https://www.orbit-os.org/getting_started.html?ref=github-org"><img src="https://img.shields.io/badge/Get%20started-Docs-2ea44f?style=for-the-badge" alt="Getting started"></a>
+  <a href="https://store.orbit-os.org/?ref=github-org"><img src="https://img.shields.io/badge/App%20Store-store.orbit--os.org-8b7ff0?style=for-the-badge" alt="App Store"></a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=orbit-os.orbit-studio"><img src="https://img.shields.io/badge/VS%20Code-Orbit%20Studio-007acc?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Orbit Studio"></a>
+  <a href="https://www.youtube.com/@orbit-os-edge"><img src="https://img.shields.io/badge/YouTube-@orbit--os--edge-ff0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"></a>
 </p>
 
 ---
 
-**A modern operating system built for edge devices and embedded systems.**
+## Why Orbit OS
 
-Orbit OS combines a powerful system runtime — **Gravity** — with a high-level SDK, giving developers full access to every hardware service through a clean, typed API over gRPC.
+Every embedded Linux product rebuilds the same platform layer: hardware access, app lifecycle, remote deployment, OTA updates, security. Orbit OS ships it ready-made, so you write only the application.
 
-[![Website](https://img.shields.io/badge/Website-orbit--os.org-blue?style=for-the-badge)](https://orbit-os.org/)
-[![SDK Reference](https://img.shields.io/badge/SDK%20Reference-API%2026+-blueviolet?style=for-the-badge)](https://www.orbit-os.org/api-reference.html)
-[![Getting Started](https://img.shields.io/badge/Getting%20Started-Docs-green?style=for-the-badge)](https://orbit-os.org/getting_started.html)
-[![Downloads](https://img.shields.io/badge/Downloads-Latest-orange?style=for-the-badge)](https://orbit-os.org/downloads.html)
-[![YouTube](https://img.shields.io/badge/YouTube-@orbit--os--edge-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@orbit-os-edge)
+- **Installs on top of your existing Linux** — no reflashing. A native runtime (**Gravity RT**) supervises every app — **no Docker**.
+- **Real-time development on real hardware** — run your code from your laptop against the device's GPIO, I²C, UART, camera and AI APIs, then ship it as a signed `.orb`.
+- **One API for all hardware**, the same in Go, Python and Java, locally or remotely (gRPC over a Unix socket on-device, mTLS from outside).
+- **App Store, OTA and fleet** — install apps in one click, update apps and the runtime over the air with rollback.
+- **Edge AI built in** — TFLite and ONNX runtimes on the device.
 
-</div>
+## How it works
 
----
+| 1 · Install | 2 · Develop | 3 · Ship |
+|---|---|---|
+| Run the installer on a Raspberry Pi, Arduino UNO Q or other ARM64 board — [guide](https://www.orbit-os.org/getting_started.html?ref=github-org) | Create a project in **[Orbit Studio](https://marketplace.visualstudio.com/items?itemName=orbit-os.orbit-studio)** (VS Code) and run it live against the device | Build a signed `.orb`, deploy it, or publish it on the **[Orbit OS Store](https://store.orbit-os.org/?ref=github-org)** |
 
-## What is Orbit OS?
-
-Orbit OS is an edge operating system designed for devices that need real-time hardware control, networking, AI inference, and application hosting — all from a single, unified runtime called **Gravity**.
-
-Applications communicate with Gravity over gRPC, either on-device via a Unix socket or remotely over TCP+TLS. Every system capability is exposed as a service with a consistent, versioned API.
-
----
-
-## Capabilities
-
-| Category | Services |
-|----------|----------|
-| **Hardware I/O** | GPIO, I2C, SPI, UART, PWM, Camera |
-| **Connectivity** | Wi-Fi, Ethernet, Bluetooth (BLE), VPN (WireGuard / OpenVPN) |
-| **Security** | Auth, Firewall |
-| **AI / ML** | ONNX & TFLite model loading, inference, streaming results |
-| **System** | OTA Updates, Package Manager (ORB), Events, Power, System stats |
-| **Apps** | AppHub — host and proxy WebUI applications through the Gravity portal |
-
----
-
-## SDK
-
-Official SDKs expose every Gravity service as a typed manager on a single client.
-
-<details>
-<summary><b>Go</b></summary>
+## Quick look
 
 ```go
+// UDS on the device, TCP + mTLS from your laptop (Developer Mode) — same API
 c, err := client.NewClientAuto("192.168.1.100")
+if err != nil {
+	log.Fatal(err)
+}
+defer c.Close()
 
-networks, _ := c.WiFiManager.Scan()
-c.GpioManager.SetValue("GPIO17", client.GpioLevelHigh)
-
-model, _ := c.AIManager.LoadModel("/models/yolov8n.onnx", "")
-result, _ := model.RunInference(inputTensor)
+led := &client.GpioPin{Name: "GPIO17", Number: 17, ChipNumber: 0}
+c.GpioManager.SetDirection(led, client.GPIO_DIR_OUT)
+c.GpioManager.SetLevel(led, client.GPIO_LEVEL_HIGH)
 ```
-
-→ [`OrbitOS-org/sdk-go`](https://github.com/OrbitOS-org/orbit-os-sdk-go) — `go get github.com/OrbitOS-org/sdk-go/v26`
-
-</details>
 
 <details>
 <summary><b>Python</b></summary>
 
 ```python
-with NewClientAuto("192.168.1.100") as c:
-    networks = c.WiFiManager.ScanWiFi("wlan0")
-    c.GpioManager.SetLevel(GpioPin(number=17, chip_number=0), high=True)
+from client import Client
+from client.gpio_manager import GpioPin, GpioDirection, GpioLevel
 
-    c.AIManager.UploadAndLoadModel("yolov8n", "/models/yolov8n.onnx", backend=c.AIManager.ONNX)
+device = Client.connect("192.168.1.100")
+led = GpioPin(name="GPIO17", number=17, chip_number=0)
+device.gpio_manager.set_direction(led, GpioDirection.OUT)
+device.gpio_manager.set_level(led, GpioLevel.HIGH)
 ```
-
-→ [`OrbitOS-org/sdk-python`](https://github.com/OrbitOS-org/orbit-os-sdk-python)
-
 </details>
 
-→ [SDK Reference (API 26+)](https://www.orbit-os.org/api-reference.html)
+<details>
+<summary><b>Java</b></summary>
 
----
+```java
+try (Client client = Client.connect("192.168.1.100", "my-app")) {
+    var led = new GpioManager.GpioPin("GPIO17", 17, 0);
+    client.gpioManager().setDirection(led, GpioManager.Direction.OUT);
+    client.gpioManager().setLevel(led, GpioManager.Level.HIGH);
+}
+```
+</details>
 
-## Get Started
+Full reference: **[SDK & API reference (API 26)](https://www.orbit-os.org/api-reference.html?ref=github-org)**
 
-- **[orbit-os.org](https://orbit-os.org/)** — product overview and documentation
-- **[Getting Started](https://orbit-os.org/getting_started.html)** — set up your first Orbit OS device and build your first app
-- **[Downloads](https://orbit-os.org/downloads.html)** — firmware images and tools
-- **[YouTube — @orbit-os-edge](https://www.youtube.com/@orbit-os-edge)** — demos, tutorials and release walkthroughs
+## Repositories
+
+| Repository | What it is |
+|---|---|
+| **[orbit-os-sdk-go](https://github.com/OrbitOS-org/orbit-os-sdk-go)** | Go SDK — `go get github.com/OrbitOS-org/orbit-os-sdk-go/v26` |
+| **[orbit-os-sdk-python](https://github.com/OrbitOS-org/orbit-os-sdk-python)** | Python SDK |
+| **[orbit-os-sdk-java](https://github.com/OrbitOS-org/orbit-os-sdk-java)** | Java SDK (Java 17+) |
+| **[orbit-os-app-mcp-server](https://github.com/OrbitOS-org/orbit-os-app-mcp-server)** | MCP server — let AI agents (Cursor, Claude Code…) control GPIO, I²C, UART, Wi-Fi and Bluetooth on a real device |
+| **[app-rpi-4ch-relay-keyestudio](https://github.com/OrbitOS-org/app-rpi-4ch-relay-keyestudio)** | Example app — 4-channel relay controller with web UI, Modbus TCP and MQTT / Home Assistant |
+
+## Capabilities
+
+| Area | Services |
+|---|---|
+| **Hardware I/O** | GPIO, I²C, SPI, UART, PWM, Camera |
+| **Connectivity** | Wi-Fi, Ethernet, Cellular, Bluetooth (BLE), VPN |
+| **AI** | TFLite and ONNX model loading and inference |
+| **System** | OTA updates, package manager (`.orb`), events, power, metrics, firewall |
+| **Apps & users** | AppHub (web UIs behind one login), push notifications to the Orbit OS mobile app |
+
+## Hardware
+
+**Community Edition** (free for any use): Raspberry Pi 3 / 4 / 5 / Zero 2 W, Arduino UNO Q and other ARM64 embedded Linux boards.
+Building your own device? See the **[Hardware Certification Program](https://www.orbit-os.org/certification.html?ref=github-org)**.
+
+## Links
+
+[Website](https://www.orbit-os.org/?ref=github-org) · [Getting started](https://www.orbit-os.org/getting_started.html?ref=github-org) · [Downloads](https://www.orbit-os.org/downloads.html?ref=github-org) · [App Store](https://store.orbit-os.org/?ref=github-org) · [Forum](https://forum.orbit-os.org/?ref=github-org) · [YouTube](https://www.youtube.com/@orbit-os-edge) · info@orbit-os.org
+
+<sub>The Orbit OS Community Edition is free for any use. The SDKs and the MCP server are open source under Apache-2.0.</sub>
+
