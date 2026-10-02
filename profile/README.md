@@ -56,7 +56,7 @@ model, _ := c.AIManager.LoadModel("/models/yolov8n.onnx", "")
 result, _ := model.RunInference(inputTensor)
 ```
 
-→ [`OrbitOS-org/sdk-go`](https://github.com/OrbitOS-org/sdk-go) — `go get github.com/OrbitOS-org/sdk-go/v26`
+→ [`OrbitOS-org/sdk-go`](https://github.com/OrbitOS-org/orbit-os-sdk-go) — `go get github.com/OrbitOS-org/sdk-go/v26`
 
 </details>
 
@@ -71,7 +71,7 @@ with NewClientAuto("192.168.1.100") as c:
     c.AIManager.UploadAndLoadModel("yolov8n", "/models/yolov8n.onnx", backend=c.AIManager.ONNX)
 ```
 
-→ [`OrbitOS-org/sdk-python`](https://github.com/OrbitOS-org/sdk-python)
+→ [`OrbitOS-org/sdk-python`](https://github.com/OrbitOS-org/orbit-os-sdk-python)
 
 </details>
 
