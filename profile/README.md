@@ -87,6 +87,7 @@ Full reference: **[SDK & API reference (API 26)](https://www.orbit-os.org/api-re
 | **[orbit-os-sdk-java](https://github.com/OrbitOS-org/orbit-os-sdk-java)** | Java SDK (Java 17+) |
 | **[orbit-os-app-mcp-server](https://github.com/OrbitOS-org/orbit-os-app-mcp-server)** | MCP server — let AI agents (Cursor, Claude Code…) control GPIO, I²C, UART, Wi-Fi and Bluetooth on a real device |
 | **[orbit-os-app-rpi-4ch-relay-keyestudio](https://github.com/OrbitOS-org/orbit-os-app-rpi-4ch-relay-keyestudio)** | Example app — 4-channel relay controller with web UI, Modbus TCP and MQTT / Home Assistant |
+| **[orbit-os-app-moquette](https://github.com/OrbitOS-org/orbit-os-app-moquette)** | MQTT broker app — [Moquette](https://github.com/moquette-io/moquette) with a web admin UI: start/stop, live clients, configuration and MQTT users (Java) |
 
 ## Capabilities
 
@@ -107,5 +108,5 @@ Building your own device? See the **[Hardware Certification Program](https://www
 
 [Website](https://www.orbit-os.org/?ref=github-org) · [Getting started](https://www.orbit-os.org/getting_started.html?ref=github-org) · [Downloads](https://www.orbit-os.org/downloads.html?ref=github-org) · [App Store](https://store.orbit-os.org/?ref=github-org) · [Forum](https://forum.orbit-os.org/?ref=github-org) · [YouTube](https://www.youtube.com/@orbit-os-edge) · info@orbit-os.org
 
-<sub>The Orbit OS Community Edition is free for any use. The SDKs and the MCP server are open source under Apache-2.0.</sub>
+<sub>The Orbit OS Community Edition is free for any use. The SDKs and the apps listed above are open source under Apache-2.0.</sub>
 
