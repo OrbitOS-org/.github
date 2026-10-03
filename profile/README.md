@@ -89,13 +89,14 @@ Full reference: **[SDK & API reference (API 26)](https://www.orbit-os.org/api-re
 | **Java** | **[orbit-os-sdk-java](https://github.com/OrbitOS-org/orbit-os-sdk-java)** | Java 17+ |
 | **C++** | *Coming soon — planned for Q4 2026* | — |
 
-**Apps** — open-source apps you can install from the Store or build yourself (Apache-2.0)
+**Apps** — open-source apps you can install from the Store or build yourself
 
-| App | Repository | What it does | Language |
-|---|---|---|---|
-| **MCP Server** | **[orbit-os-app-mcp-server](https://github.com/OrbitOS-org/orbit-os-app-mcp-server)** | Let AI agents (Cursor, Claude Code…) control GPIO, I²C, UART, Wi-Fi and Bluetooth on a real device | Go |
-| **Moquette MQTT Broker** | **[orbit-os-app-moquette](https://github.com/OrbitOS-org/orbit-os-app-moquette)** | [Moquette](https://github.com/moquette-io/moquette) MQTT broker with a web admin UI: start/stop, live clients, configuration and MQTT users | Java |
-| **RPI 4-Channel Relay** | **[orbit-os-app-rpi-4ch-relay-keyestudio](https://github.com/OrbitOS-org/orbit-os-app-rpi-4ch-relay-keyestudio)** | 4-channel relay controller with web UI, Modbus TCP and MQTT / Home Assistant | Go |
+| App | Repository | What it does | Language | License |
+|---|---|---|---|---|
+| **MCP Server** | **[orbit-os-app-mcp-server](https://github.com/OrbitOS-org/orbit-os-app-mcp-server)** | Let AI agents (Cursor, Claude Code…) control GPIO, I²C, UART, Wi-Fi and Bluetooth on a real device | Go | Apache-2.0 |
+| **Edge AI – Smart Image Detection** | **[orbit-os-app-smart-image-detection](https://github.com/OrbitOS-org/orbit-os-app-smart-image-detection)** | On-device object detection (YOLOv8, TFLite) on your own images — an example of the Orbit OS AI API | Go | AGPL-3.0 |
+| **Moquette MQTT Broker** | **[orbit-os-app-moquette](https://github.com/OrbitOS-org/orbit-os-app-moquette)** | [Moquette](https://github.com/moquette-io/moquette) MQTT broker with a web admin UI: start/stop, live clients, configuration and MQTT users | Java | Apache-2.0 |
+| **RPI 4-Channel Relay** | **[orbit-os-app-rpi-4ch-relay-keyestudio](https://github.com/OrbitOS-org/orbit-os-app-rpi-4ch-relay-keyestudio)** | 4-channel relay controller with web UI, Modbus TCP and MQTT / Home Assistant | Go | Apache-2.0 |
 
 ## Capabilities
 
@@ -116,5 +117,5 @@ Building your own device? See the **[Hardware Certification Program](https://www
 
 [Website](https://www.orbit-os.org/?ref=github-org) · [Getting started](https://www.orbit-os.org/getting_started.html?ref=github-org) · [Downloads](https://www.orbit-os.org/downloads.html?ref=github-org) · [App Store](https://store.orbit-os.org/?ref=github-org) · [Forum](https://forum.orbit-os.org/?ref=github-org) · [YouTube](https://www.youtube.com/@orbit-os-edge) · info@orbit-os.org
 
-<sub>The Orbit OS Community Edition is free for any use. The SDKs and the apps listed above are open source under Apache-2.0.</sub>
+<sub>The Orbit OS Community Edition is free for any use. The SDKs are open source under Apache-2.0; the apps listed above are open source under the license shown for each one.</sub>
 
