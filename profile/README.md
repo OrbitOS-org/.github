@@ -80,14 +80,21 @@ Full reference: **[SDK & API reference (API 26)](https://www.orbit-os.org/api-re
 
 ## Repositories
 
-| Repository | What it is |
-|---|---|
-| **[orbit-os-sdk-go](https://github.com/OrbitOS-org/orbit-os-sdk-go)** | Go SDK — `go get github.com/OrbitOS-org/orbit-os-sdk-go/v26` |
-| **[orbit-os-sdk-python](https://github.com/OrbitOS-org/orbit-os-sdk-python)** | Python SDK |
-| **[orbit-os-sdk-java](https://github.com/OrbitOS-org/orbit-os-sdk-java)** | Java SDK (Java 17+) |
-| **[orbit-os-app-mcp-server](https://github.com/OrbitOS-org/orbit-os-app-mcp-server)** | MCP server — let AI agents (Cursor, Claude Code…) control GPIO, I²C, UART, Wi-Fi and Bluetooth on a real device |
-| **[orbit-os-app-rpi-4ch-relay-keyestudio](https://github.com/OrbitOS-org/orbit-os-app-rpi-4ch-relay-keyestudio)** | Example app — 4-channel relay controller with web UI, Modbus TCP and MQTT / Home Assistant |
-| **[orbit-os-app-moquette](https://github.com/OrbitOS-org/orbit-os-app-moquette)** | MQTT broker app — [Moquette](https://github.com/moquette-io/moquette) with a web admin UI: start/stop, live clients, configuration and MQTT users (Java) |
+**SDKs** — one hardware API, three languages (Apache-2.0)
+
+| Language | Repository | Notes |
+|---|---|---|
+| **Go** | **[orbit-os-sdk-go](https://github.com/OrbitOS-org/orbit-os-sdk-go)** | `go get github.com/OrbitOS-org/orbit-os-sdk-go/v26` |
+| **Python** | **[orbit-os-sdk-python](https://github.com/OrbitOS-org/orbit-os-sdk-python)** | Python SDK |
+| **Java** | **[orbit-os-sdk-java](https://github.com/OrbitOS-org/orbit-os-sdk-java)** | Java 17+ |
+
+**Apps** — open-source apps you can install from the Store or build yourself (Apache-2.0)
+
+| App | Repository | What it does | Language |
+|---|---|---|---|
+| **MCP Server** | **[orbit-os-app-mcp-server](https://github.com/OrbitOS-org/orbit-os-app-mcp-server)** | Let AI agents (Cursor, Claude Code…) control GPIO, I²C, UART, Wi-Fi and Bluetooth on a real device | Go |
+| **Moquette MQTT Broker** | **[orbit-os-app-moquette](https://github.com/OrbitOS-org/orbit-os-app-moquette)** | [Moquette](https://github.com/moquette-io/moquette) MQTT broker with a web admin UI: start/stop, live clients, configuration and MQTT users | Java |
+| **RPI 4-Channel Relay** | **[orbit-os-app-rpi-4ch-relay-keyestudio](https://github.com/OrbitOS-org/orbit-os-app-rpi-4ch-relay-keyestudio)** | 4-channel relay controller with web UI, Modbus TCP and MQTT / Home Assistant | Go |
 
 ## Capabilities
 
