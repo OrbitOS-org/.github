@@ -82,12 +82,12 @@ Full reference: **[SDK & API reference (API 26)](https://www.orbit-os.org/api-re
 
 **SDKs** — one hardware API, three languages (Apache-2.0)
 
-| Language | Repository | Notes |
+| Language | Repository | Requires |
 |---|---|---|
-| **Go** | **[orbit-os-sdk-go](https://github.com/OrbitOS-org/orbit-os-sdk-go)** | `go get github.com/OrbitOS-org/orbit-os-sdk-go/v26` |
-| **Python** | **[orbit-os-sdk-python](https://github.com/OrbitOS-org/orbit-os-sdk-python)** | Python SDK |
+| **Go** | **[orbit-os-sdk-go](https://github.com/OrbitOS-org/orbit-os-sdk-go)** | Go 1.25+ |
+| **Python** | **[orbit-os-sdk-python](https://github.com/OrbitOS-org/orbit-os-sdk-python)** | Python 3.10+ |
 | **Java** | **[orbit-os-sdk-java](https://github.com/OrbitOS-org/orbit-os-sdk-java)** | Java 17+ |
-| **C++** | *Coming soon* | Planned for Q4 2026 |
+| **C++** | *Coming soon — planned for Q4 2026* | — |
 
 **Apps** — open-source apps you can install from the Store or build yourself (Apache-2.0)
 
