@@ -25,7 +25,7 @@ Every embedded Linux product rebuilds the same platform layer: hardware access, 
 
 - **Installs on top of your existing Linux** — no reflashing. A native runtime (**Gravity RT**) supervises every app — **no Docker**.
 - **Real-time development on real hardware** — run your code from your laptop against the device's GPIO, I²C, UART, camera and AI APIs, then ship it as a signed `.orb`.
-- **One API for all hardware**, the same in Go, Python and Java, locally or remotely (gRPC over a Unix socket on-device, mTLS from outside).
+- **One API for all hardware**, the same in Go, Python and Java, locally or remotely (IPC on the device, a secure mTLS connection from outside).
 - **App Store, OTA and fleet** — install apps in one click, update apps and the runtime over the air with rollback.
 - **Edge AI built in** — TFLite and ONNX runtimes on the device.
 
