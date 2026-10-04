@@ -76,7 +76,7 @@ try (Client client = Client.connect("192.168.1.100", "my-app")) {
 ```
 </details>
 
-Full reference: **[SDK & API reference (API 26)](https://www.orbit-os.org/api-reference.html?ref=github-org)**
+Full reference: **[SDK & API reference (API 26)](https://www.orbit-os.org/api-reference.html?ref=github-org)** · **[PDF manuals](https://github.com/OrbitOS-org/orbit-os-docs)**
 
 ## Repositories
 
@@ -88,6 +88,12 @@ Full reference: **[SDK & API reference (API 26)](https://www.orbit-os.org/api-re
 | **Python** | **[orbit-os-sdk-python](https://github.com/OrbitOS-org/orbit-os-sdk-python)** | Python 3.10+ |
 | **Java** | **[orbit-os-sdk-java](https://github.com/OrbitOS-org/orbit-os-sdk-java)** | Java 17+ |
 | **C++** | *Coming soon — planned for Q4 2026* | — |
+
+**Documentation** — downloadable manuals
+
+| Repository | What it has |
+|---|---|
+| **[orbit-os-docs](https://github.com/OrbitOS-org/orbit-os-docs)** | SDK API Reference as a printable PDF, one per API version, covering Go, Java and Python |
 
 **Apps** — open-source apps you can install from the Store or build yourself
 
@@ -116,7 +122,7 @@ Building your own device? See the **[Hardware Certification Program](https://www
 
 ## Links
 
-[Website](https://www.orbit-os.org/?ref=github-org) · [Getting started](https://www.orbit-os.org/getting_started.html?ref=github-org) · [Downloads](https://www.orbit-os.org/downloads.html?ref=github-org) · [App Store](https://store.orbit-os.org/?ref=github-org) · [Forum](https://forum.orbit-os.org/?ref=github-org) · [YouTube](https://www.youtube.com/@orbit-os-edge) · info@orbit-os.org
+[Website](https://www.orbit-os.org/?ref=github-org) · [Getting started](https://www.orbit-os.org/getting_started.html?ref=github-org) · [Downloads](https://www.orbit-os.org/downloads.html?ref=github-org) · [Docs (PDF)](https://github.com/OrbitOS-org/orbit-os-docs) · [App Store](https://store.orbit-os.org/?ref=github-org) · [Forum](https://forum.orbit-os.org/?ref=github-org) · [YouTube](https://www.youtube.com/@orbit-os-edge) · info@orbit-os.org
 
 <sub>The Orbit OS Community Edition is free for any use. The SDKs are open source under Apache-2.0; the apps listed above are open source under the license shown for each one.</sub>
 
