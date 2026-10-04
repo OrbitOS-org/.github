@@ -25,15 +25,11 @@ Every embedded Linux product rebuilds the same platform layer: hardware access, 
 
 - **Installs on top of your existing Linux** — no reflashing. A native runtime (**Gravity RT**) supervises every app — **no Docker**.
 - **Real-time development on real hardware** — run your code from your laptop against the device's GPIO, I²C, UART, camera and AI APIs, then ship it as a signed `.orb`.
-- **One API for all hardware**, the same in Go, Python and Java, locally or remotely (IPC on the device, a secure mTLS connection from outside).
+- **One API for all hardware**, the same in Go, Python and Java, locally or remotely (IPC over a Unix socket on-device, mTLS from outside).
 - **App Store, OTA and fleet** — install apps in one click, update apps and the runtime over the air with rollback.
 - **Edge AI built in** — TFLite and ONNX runtimes on the device.
 
 ## How it works
-
-<p align="center">
-  <a href="https://www.orbit-os.org/platform.html?ref=github-org"><img src="https://www.orbit-os.org/orbit_os_diagram.png" width="820" alt="Orbit OS architecture: apps packaged as .orb run on Orbit OS and the Gravity RT runtime, on top of Linux and the hardware, connected to the cloud and app store, the device dashboard and remote development tools"></a>
-</p>
 
 | 1 · Install | 2 · Develop | 3 · Ship |
 |---|---|---|
@@ -80,7 +76,7 @@ try (Client client = Client.connect("192.168.1.100", "my-app")) {
 ```
 </details>
 
-Full reference: **[SDK & API reference (API 26)](https://www.orbit-os.org/api-reference.html?ref=github-org)** · **[PDF manuals](https://github.com/OrbitOS-org/orbit-os-docs)**
+Full reference: **[SDK & API reference (API 26)](https://www.orbit-os.org/api-reference.html?ref=github-org)**
 
 ## Repositories
 
@@ -92,12 +88,6 @@ Full reference: **[SDK & API reference (API 26)](https://www.orbit-os.org/api-re
 | **Python** | **[orbit-os-sdk-python](https://github.com/OrbitOS-org/orbit-os-sdk-python)** | Python 3.10+ |
 | **Java** | **[orbit-os-sdk-java](https://github.com/OrbitOS-org/orbit-os-sdk-java)** | Java 17+ |
 | **C++** | *Coming soon — planned for Q4 2026* | — |
-
-**Documentation** — downloadable manuals
-
-| Repository | What it has |
-|---|---|
-| **[orbit-os-docs](https://github.com/OrbitOS-org/orbit-os-docs)** | SDK API Reference as a printable PDF, one per API version, covering Go, Java and Python |
 
 **Apps** — open-source apps you can install from the Store or build yourself
 
@@ -126,7 +116,7 @@ Building your own device? See the **[Hardware Certification Program](https://www
 
 ## Links
 
-[Website](https://www.orbit-os.org/?ref=github-org) · [Getting started](https://www.orbit-os.org/getting_started.html?ref=github-org) · [Downloads](https://www.orbit-os.org/downloads.html?ref=github-org) · [Docs (PDF)](https://github.com/OrbitOS-org/orbit-os-docs) · [App Store](https://store.orbit-os.org/?ref=github-org) · [Forum](https://forum.orbit-os.org/?ref=github-org) · [YouTube](https://www.youtube.com/@orbit-os-edge) · info@orbit-os.org
+[Website](https://www.orbit-os.org/?ref=github-org) · [Getting started](https://www.orbit-os.org/getting_started.html?ref=github-org) · [Downloads](https://www.orbit-os.org/downloads.html?ref=github-org) · [App Store](https://store.orbit-os.org/?ref=github-org) · [Forum](https://forum.orbit-os.org/?ref=github-org) · [YouTube](https://www.youtube.com/@orbit-os-edge) · info@orbit-os.org
 
 <sub>The Orbit OS Community Edition is free for any use. The SDKs are open source under Apache-2.0; the apps listed above are open source under the license shown for each one.</sub>
 
