@@ -31,6 +31,10 @@ Every embedded Linux product rebuilds the same platform layer: hardware access, 
 
 ## How it works
 
+<p align="center">
+  <a href="https://www.orbit-os.org/platform.html?ref=github-org"><img src="https://www.orbit-os.org/orbit_os_diagram.png" width="820" alt="Orbit OS architecture: apps packaged as .orb run on Orbit OS and the Gravity RT runtime, on top of Linux and the hardware, connected to the cloud and app store, the device dashboard and remote development tools"></a>
+</p>
+
 | 1 · Install | 2 · Develop | 3 · Ship |
 |---|---|---|
 | Run the installer on a Raspberry Pi, Arduino UNO Q or other ARM64 board — [guide](https://www.orbit-os.org/getting_started.html?ref=github-org) | Create a project in **[Orbit Studio](https://marketplace.visualstudio.com/items?itemName=orbit-os.orbit-studio)** (VS Code) and run it live against the device | Build a signed `.orb`, deploy it, or publish it on the **[Orbit OS Store](https://store.orbit-os.org/?ref=github-org)** |
