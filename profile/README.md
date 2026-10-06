@@ -109,6 +109,16 @@ Full reference: **[SDK & API reference (API 26)](https://www.orbit-os.org/api-re
 | **Moquette MQTT Broker** | **[orbit-os-app-moquette](https://github.com/OrbitOS-org/orbit-os-app-moquette)** | [Moquette](https://github.com/moquette-io/moquette) MQTT broker with a web admin UI: start/stop, live clients, configuration and MQTT users | Java | Apache-2.0 |
 | **RPI 4-Channel Relay** | **[orbit-os-app-rpi-4ch-relay-keyestudio](https://github.com/OrbitOS-org/orbit-os-app-rpi-4ch-relay-keyestudio)** | 4-channel relay controller with web UI, Modbus TCP and MQTT / Home Assistant | Go | Apache-2.0 |
 
+## Built on Orbit OS
+
+Apps and products made by other teams that run on Orbit OS.
+
+| Project | What it is | Links |
+|---|---|---|
+| **[Sprinqua](https://www.sprinqua.com/?ref=orbit-os-github)** | Smart irrigation controller for Raspberry Pi relay boards: watering programs, weather-based Smart Watering and Home Assistant over MQTT. Open source (GPL-3.0). | [Website](https://www.sprinqua.com/?ref=orbit-os-github) · [GitHub](https://github.com/Sprinqua) · [Orbit OS Store](https://store.orbit-os.org/app/sprinqua?ref=github-org) |
+
+Built something on Orbit OS? Tell us at info@orbit-os.org or in the [forum](https://forum.orbit-os.org/?ref=github-org) and we'll add it here.
+
 ## Capabilities
 
 | Area | Services |
