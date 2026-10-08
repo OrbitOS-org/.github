@@ -108,6 +108,7 @@ Full reference: **[SDK & API reference (API 26)](https://www.orbit-os.org/api-re
 | **Mochi MQTT Broker** | **[orbit-os-app-mochi](https://github.com/OrbitOS-org/orbit-os-app-mochi)** | [Mochi MQTT](https://github.com/mochi-mqtt/server) broker with a web admin UI: listeners, MQTT users, topic filters and live messages | Go | Apache-2.0 |
 | **Moquette MQTT Broker** | **[orbit-os-app-moquette](https://github.com/OrbitOS-org/orbit-os-app-moquette)** | [Moquette](https://github.com/moquette-io/moquette) MQTT broker with a web admin UI: start/stop, live clients, configuration and MQTT users | Java | Apache-2.0 |
 | **RPI 4-Channel Relay** | **[orbit-os-app-rpi-4ch-relay-keyestudio](https://github.com/OrbitOS-org/orbit-os-app-rpi-4ch-relay-keyestudio)** | 4-channel relay controller with web UI, Modbus TCP and MQTT / Home Assistant | Go | Apache-2.0 |
+| **Serial Console** | **[orbit-os-app-serial-console](https://github.com/OrbitOS-org/orbit-os-app-serial-console)** | A serial terminal in your browser: reach a device's UART over the network, with a real terminal emulator | Go | Apache-2.0 |
 
 ## Built on Orbit OS
 
