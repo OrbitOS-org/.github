@@ -19,11 +19,19 @@ a native app runtime, signed apps, the Orbit OS Store, atomic OTA updates and on
 
 ---
 
+## ▶ How Orbit OS works
+
+The whole platform in 11 minutes: the device and its layers, the HAL and the API, Orbit Studio, the Store, updates and real products built on Orbit OS.
+
+<p align="center">
+  <a href="https://youtu.be/Z2mgWvDO2rQ"><img src="https://raw.githubusercontent.com/OrbitOS-org/.github/master/profile/how-orbit-os-works-video.jpg" width="640" alt="Watch on YouTube: How Orbit OS Works, an Android-like platform for embedded Linux"></a>
+</p>
+
 ## Why Orbit OS
 
 Every embedded Linux product rebuilds the same platform layer: hardware access, app lifecycle, remote deployment, OTA updates, security. Orbit OS ships it ready-made, so you write only the application.
 
-- **Installs on top of your existing Linux** — no reflashing. A native runtime (**Gravity RT**) supervises every app — **no Docker**.
+- **Installs on top of your existing Linux** — no reflashing. The native **Orbit OS Runtime** supervises every app — **no Docker**.
 - **Real-time development on real hardware** — run your code from your laptop against the device's GPIO, I²C, UART, camera and AI APIs, then ship it as a signed `.orb`.
 - **One API for all hardware**, the same in Go, Python and Java, locally or remotely (IPC on the device, a secure mTLS connection from outside).
 - **Orbit OS Store, OTA and fleet** — install apps in one click, update apps and the runtime over the air with rollback.
@@ -31,7 +39,7 @@ Every embedded Linux product rebuilds the same platform layer: hardware access, 
 
 ## Orbit OS runtime
 
-Your apps run natively on **Gravity RT**, the [Orbit OS](https://www.orbit-os.org/?ref=github-org) runtime, with no Docker. It runs and isolates each signed app, and gives it one API for the hardware through the HAL.
+Your apps run natively on the **[Orbit OS](https://www.orbit-os.org/?ref=github-org) Runtime**, with no Docker: the **Core** runs each signed app in its own sandbox and gives it one API, and the **HAL** connects that API to each board's hardware.
 
 Apps ship as signed `.orb` packages, the equivalent of an APK on Android. Install them locally on the device or from the **[Orbit OS Store](https://store.orbit-os.org/?ref=github-org)**. [Learn more](https://www.orbit-os.org/platform.html?ref=github-org).
 
